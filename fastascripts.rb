@@ -2,8 +2,8 @@ require 'formula'
 
 class Fastascripts < Formula
   homepage 'https://github.com/sjackman/fastascripts'
-  url 'https://github.com/sjackman/fastascripts/archive/1.0.tar.gz'
-  sha1 '7d72663ef024fa0c22dca7ac6b7baf1169ed8638'
+  url 'https://github.com/sjackman/fastascripts/archive/1.0.1.tar.gz'
+  sha1 '654c559564035a5263e5e29f07ea4df90e63188a'
   head 'https://github.com/sjackman/fastascripts.git'
 
   def install
@@ -11,6 +11,6 @@ class Fastascripts < Formula
   end
 
   def test
-    system "faclean <<<'>1' >/dev/null"
+    system "echo '>1' |faclean >/dev/null"
   end
 end
