@@ -1,16 +1,16 @@
-require 'formula'
-
 class Fastascripts < Formula
-  homepage 'https://github.com/sjackman/fastascripts'
-  url 'https://github.com/sjackman/fastascripts/archive/1.0.1.tar.gz'
-  sha1 '654c559564035a5263e5e29f07ea4df90e63188a'
-  head 'https://github.com/sjackman/fastascripts.git'
+  desc "Manipulate FASTA files"
+  homepage "https://github.com/sjackman/fastascripts"
+  url "https://github.com/sjackman/fastascripts/archive/1.0.1.tar.gz"
+  sha256 "9e0d57e9a6de893152ef7093d032474866bab472484487653bf64f129fba2f79"
+  head "https://github.com/sjackman/fastascripts.git"
+  # tag "bioinformatics"
 
   def install
-    system "make prefix=#{prefix} install"
+    system "make", "prefix=#{prefix}", "install"
   end
 
-  def test
-    system "echo '>1' |faclean >/dev/null"
+  test do
+    assert_match "x\t4\n", pipe_output(bin/"falength", ">x\nACGT\n")
   end
 end
