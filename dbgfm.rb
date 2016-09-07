@@ -1,17 +1,17 @@
-require 'formula'
-
 class Dbgfm < Formula
-  homepage 'https://github.com/jts/dbgfm'
-  url 'https://github.com/jts/dbgfm/archive/0.1.tar.gz'
-  sha1 '80cb73b5e17a10c9b3bae4fdc033ef65cafefbc0'
-  head 'https://github.com/jts/dbgfm.git'
+  desc "FM-index representation of a de Bruijn graph"
+  homepage "https://github.com/jts/dbgfm"
+  url "https://github.com/jts/dbgfm/archive/0.1.tar.gz"
+  sha256 "9660a191d53dd47ed0da90c422b5632cb5bcc477ef3e287e45ad7090841570cc"
+  head "https://github.com/jts/dbgfm.git"
+  # tag "bioinformatics"
 
   def install
     mkdir_p [bin, include, lib]
-    system 'make', 'install', "prefix=#{prefix}"
+    system "make", "install", "prefix=#{prefix}"
   end
 
   test do
-    system 'dbgfm 2>&1 |grep -q dbgfm'
+    assert_match "usage", shell_output(bin/"dbgfm", 1)
   end
 end
