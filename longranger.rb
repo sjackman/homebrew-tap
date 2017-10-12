@@ -11,6 +11,6 @@ class Longranger < Formula
   end
 
   test do
-    system "#{bin}/longranger", "--version"
+    system "#{bin}/longranger", "-h"
   end
 end
