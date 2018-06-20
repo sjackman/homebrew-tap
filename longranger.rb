@@ -1,8 +1,8 @@
 class Longranger < Formula
   desc "10x Genomics phasing and structural variant calling pipeline"
   homepage "https://support.10xgenomics.com/genome-exome/software/downloads/latest"
-  url "http://cf.10xgenomics.com/releases/genome/longranger-2.1.6.tar.gz"
-  sha256 "3e4aafc353a3d7f5cd0affd901cb779d45cca7e96ffd0b9a6a89046342cd6ade"
+  url "http://cf.10xgenomics.com/releases/genome/longranger-2.2.2.tar.gz"
+  sha256 "fc89527d34563ae5afe80d6ae134a981e86a0476b3ba1abd64642dea75b90a22"
   # tag "bioinformatics"
 
   def install
